@@ -8,7 +8,7 @@ const Skills = () => {
       .then((data) => setValues(data));
   }, []);
   return (
-    <div className="col-md-8">
+    <div className="col-md-9">
       {values.map((value) => (
         <div className="border border-black my-3">
           <div className="mb-3">
