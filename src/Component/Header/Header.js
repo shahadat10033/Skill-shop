@@ -7,9 +7,9 @@ const Header = () => {
         <div className="container-fluid ">
           <h3>Skill Shop</h3>
 
-          <div style={{ width: "60px", height: "60px" }} className="mt-2">
+          <div className="mt-2  ">
             <img
-              className="img-fluid border rounded-5"
+              style={{ width: "60px", height: "60px", borderRadius: "50%" }}
               src="https://img.freepik.com/free-photo/young-male-formal-outfit-sitting-outdoor-cafe-talking-phone_181624-26363.jpg"
               alt=""
             ></img>

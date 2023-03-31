@@ -34,7 +34,11 @@ const Skills = () => {
               <div className="d-flex justify-content-between my-3">
                 <div style={{ width: "60px", height: "60px" }} className="me-3">
                   <img
-                    className="img-fluid border rounded-circle"
+                    style={{
+                      width: "60px",
+                      height: "60px",
+                      borderRadius: "50%",
+                    }}
                     src={value.authorImage}
                     alt=""
                   />
