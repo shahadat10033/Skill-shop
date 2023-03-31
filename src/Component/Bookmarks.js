@@ -1,7 +1,6 @@
 import React from "react";
 
 const Bookmarks = (props) => {
-  console.log(props);
   const { time, bookmark } = props;
 
   return (

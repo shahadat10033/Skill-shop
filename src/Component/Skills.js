@@ -1,6 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import Bookmarks from "./Bookmarks";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Skills = () => {
   const [values, setValues] = useState([]);
@@ -18,8 +20,12 @@ const Skills = () => {
   };
 
   const addBookmark = (title) => {
-    let newBookmarkArray = [...bookmark, title];
-    setBookmark(newBookmarkArray);
+    if (!bookmark.includes(title)) {
+      let newBookmarkArray = [...bookmark, title];
+      setBookmark(newBookmarkArray);
+    } else {
+      toast("Already bookmarked!");
+    }
   };
 
   return (
@@ -53,7 +59,7 @@ const Skills = () => {
                 <p>
                   <span>{value.readTime}</span> min read
                   <button
-                    className="border border-0"
+                    className="border-1 rounded-2 mx-2 btn-outline-light"
                     onClick={() => addBookmark(value.title)}
                   >
                     <svg
@@ -67,6 +73,7 @@ const Skills = () => {
                       <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z" />
                     </svg>
                   </button>
+                  <ToastContainer />
                 </p>
               </div>
             </div>
